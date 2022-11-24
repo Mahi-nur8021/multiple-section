@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="indesx.css">
+
+</head>
+<body> 
+   <section>
+              <div class="about-img">
+                 <img src="/user.png" alt="">
+              </div>
+
+              <div class="about-text">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti tenetur natus unde eum non porro necessitatibus, dolorum aliquam rem eius possimus animi velit quidem repellendus.</p>
+ 
+                 
+              <div class="tab-link">
+                  <p class="tab-links active-links" onclick="opentab('first')">First</p>
+                  <p class="tab-links" onclick="opentab('second')">Second</p>
+                  <p class="tab-links" onclick="opentab('thrid')">Third</p>
+              </div>
+
+                  <div class="tab-contents active-contents" id="first">
+                     <p>This is first Contents</p>
+                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, porro.</p>
+                  </div>
+                  <div class="tab-contents" id="second">
+                     <p>This is  Second Contents</p>
+                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, porro.</p>
+                  </div>
+                  <div class="tab-contents" id="thrid">
+                     <p>This is Third Contents</p>
+                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, porro.</p>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+              </div>
+   </section>
+ 
+
+
+   <script>
+    let tab_link=document.getElementsByClassName("tab-links");
+
+    let tab_contents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tab_links of tab_link){
+            tab_links.classList.remove('active-links');
+        }
+        for(tab_content of tab_contents){
+            tab_content.classList.remove('active-contents');
+        }
+        event.currentTarget.classList.add('active-links');
+        document.getElementById(tabname).classList.add('active-contents')
+    }
+   
+
+ 
+   </script>
+</body>
+</html>
